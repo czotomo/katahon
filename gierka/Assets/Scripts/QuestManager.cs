@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Security.Policy;
 using System.Text;
@@ -72,13 +73,13 @@ namespace Assets.Scripts
             }
         }
 
-        public string ConcatenateQuestNames(string separator = "\n")
+        public string ConcatenateQuestNames()
         {
             var builder = new StringBuilder();
             foreach (var quest in _activeQuests)
             {
                 builder.Append(quest.Name);
-                builder.Append(separator);
+                builder.Append(Environment.NewLine);
             }
             return builder.ToString().Trim();
         }
