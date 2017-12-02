@@ -5,28 +5,34 @@ using UnityEngine;
 
 public class Bagel : MonoBehaviour
 {
-    public PlayerController Player;
+    public static PlayerController Player;
     public static float Value = 2;
     public static float FreshTime = 100;
     private float expiryTime;
 
-    void OnTriggerEnter(Collider c)
+    public static void Eat(GameObject obj)
     {
-        if (c.gameObject == Player)
-        {
-            Player.PlayerStats.Eat(Value);
-            Destroy(this, 0.5f);
-        }
+        Player.PlayerStats.Eat(Bagel.Value);
+        Destroy(obj);
     }
 
     void Start()
     {
-        transform.rotation = Player.transform.rotation;
+        //transform.rotation = Player.transform.rotation;
+        Debug.Log(this.transform.position);
         expiryTime = Time.time + FreshTime;
     }
 
     void Update()
     {
         if (Time.time > expiryTime) Destroy(this);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Building"))
+        {
+            transform.position += (collision.gameObject.transform.position - transform.position);
+        }
     }
 }

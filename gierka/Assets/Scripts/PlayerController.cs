@@ -6,7 +6,6 @@ namespace Assets.Scripts
     public class PlayerController : MonoBehaviour
     {
         public PlayerStats PlayerStats;
-
         private QuestManager _questManager;
 
         void Start()

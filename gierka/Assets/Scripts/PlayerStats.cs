@@ -11,7 +11,7 @@ public class PlayerStats
    [Range(0, 20)] public float PlKnow = 20;
    [Range(0, 20)] public float PlLuck = 20;
    private const float MinSpeed = 1;
-   private const float DtHunger = 0.01f;
+   private const float DtHunger = 1f;
    private const float DtTired = 0.01f;
    private const float DtKnow = 0.01f;
 
@@ -23,6 +23,7 @@ public class PlayerStats
        if (PlTired < 0) PlTired = 0;
        PlKnow -= DtKnow * Time.deltaTime;
        if (PlKnow < 0) PlKnow = 0;
+       Debug.Log(GetSpeed());
     }
 
     public void Eat(float value)
