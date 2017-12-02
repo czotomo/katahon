@@ -430,6 +430,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4396d6335a1957f4eba604c0e2c22868, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &161200487 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1260832082327988, guid: 36a367aad9ea3af4ba4cf5dc2defb176,
+    type: 2}
+  m_PrefabInternal: {fileID: 2104139851}
 --- !u!1001 &217542380
 Prefab:
   m_ObjectHideFlags: 0
@@ -699,14 +704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Buildings:
-  - {fileID: 2056170867}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 161200487}
 --- !u!4 &1307305143
 Transform:
   m_ObjectHideFlags: 0
@@ -1012,11 +1010,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 59f50906777722a49829ef66a972ea34, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &2056170867 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1260832082327988, guid: 36a367aad9ea3af4ba4cf5dc2defb176,
-    type: 2}
-  m_PrefabInternal: {fileID: 831489591}
 --- !u!1 &2087981214
 GameObject:
   m_ObjectHideFlags: 0

@@ -57,7 +57,11 @@ namespace Assets.Scripts
 
         private void AddNewQuest()
         {
-            _activeQuests.Add(questFactory.GenerateRandomReachDestinationQuest());
+            var quest = questFactory.GenerateRandomReachDestinationQuest();
+            if (quest != null)
+            {
+                _activeQuests.Add(quest);
+            }
         }
 
         private void AddNewQuestIfPossible()
