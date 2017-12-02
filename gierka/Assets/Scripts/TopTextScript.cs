@@ -3,12 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TopTextScript : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
+public class TopTextScript : MonoBehaviour
+{
 	
 	// Update is called once per frame
 	void Update () {

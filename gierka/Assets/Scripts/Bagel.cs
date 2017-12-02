@@ -6,7 +6,7 @@ using UnityEngine;
 public class Bagel : MonoBehaviour
 {
     public static PlayerController Player;
-    public static float Value = 2;
+    public static float Value = 5;
     public static float FreshTime = 100;
     private float expiryTime;
 

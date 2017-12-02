@@ -7,7 +7,8 @@ namespace Assets.Scripts.Quests
         public override void OnQuestCompleted(PlayerStats stats)
         {
             Debug.Log("O kurwa udało się!");
-            stats.Learn(5.0f);
+            stats.Learn(2.0f);
+            stats.Score += stats.GetGrade();
         }
     }
 }

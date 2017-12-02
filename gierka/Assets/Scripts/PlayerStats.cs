@@ -16,6 +16,8 @@ public class PlayerStats
    private const float DtTired = 0.01f;
    private const float DtKnow = 0.01f;
 
+    public float Score = 0f;
+
    public void UpdateStats()
    {
        PlHunger -= DtHunger * Time.deltaTime;
@@ -52,7 +54,7 @@ public class PlayerStats
         return MinSpeed * (1 + PlHunger / 100) * (1 + PlTired / 100);
     }
 
-   public float GetGrade(string subject)
+   public float GetGrade()
    {
        float randLuck = Random.Range(PlLuck/4, PlLuck);
        return 2 * (1 + PlHunger/100) * (1 + PlTired/100) * (1 + PlJoy/100) * (1 + PlKnow/100) * (1 + randLuck / 100);
