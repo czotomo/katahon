@@ -13,19 +13,42 @@ public class PlayerStats
    private const float MinSpeed = 1;
    private const float DtHunger = 0.01f;
    private const float DtTired = 0.01f;
+   private const float DtKnow = 0.01f;
 
-   void UpdateStats()
+   public void UpdateStats()
    {
        PlHunger -= DtHunger * Time.deltaTime;
        if (PlHunger < 0) PlHunger = 0;
        PlTired -= DtTired * Time.deltaTime;
        if (PlTired < 0) PlTired = 0;
-   }
+       PlKnow -= DtKnow * Time.deltaTime;
+       if (PlKnow < 0) PlKnow = 0;
+    }
 
-   public float GetSpeed()
-   {
-       return MinSpeed * (1 + PlHunger / 100) * (1 + PlTired / 100);
-   }
+    public void Eat(float value)
+    {
+        PlHunger = Mathf.Min(PlHunger + value, 20);
+    }
+
+    public void Learn(float value)
+    {
+        PlKnow = Mathf.Min(PlKnow + value, 20);
+    }
+
+    public void BeHappy(float value)
+    {
+        PlJoy = Mathf.Min(PlJoy + value, 20);
+    }
+
+    public void Rest(float value)
+    {
+        PlTired = Mathf.Min(PlTired + value, 20);
+    }
+
+    public float GetSpeed()
+    {
+        return MinSpeed * (1 + PlHunger / 100) * (1 + PlTired / 100);
+    }
 
    public float GetGrade(string subject)
    {
