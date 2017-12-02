@@ -5,11 +5,12 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerStats
 {
-   [Range(0, 20)] public float PlJoy = 20;
-   [Range(0, 20)] public float PlHunger = 20;
-   [Range(0, 20)] public float PlTired = 20;
-   [Range(0, 20)] public float PlKnow = 20;
-   [Range(0, 20)] public float PlLuck = 20;
+
+   [Range(0, 20)] public float PlJoy = 10;
+   [Range(0, 20)] public float PlHunger = 0;
+   [Range(0, 20)] public float PlTired = 0;
+   [Range(0, 20)] public float PlKnow = 0;
+   [Range(0, 20)] public float PlLuck = 10;
    private const float MinSpeed = 1;
    private const float DtHunger = 0.01f;
    private const float DtTired = 0.01f;
