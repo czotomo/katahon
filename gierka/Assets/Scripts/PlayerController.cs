@@ -6,11 +6,13 @@ namespace Assets.Scripts
     public class PlayerController : MonoBehaviour
     {
         public PlayerStats PlayerStats;
+        private BagelSpawner _bagelSpawner;
         private QuestManager _questManager;
 
         void Start()
         {
             _questManager = FindObjectOfType<QuestManager>();
+            _bagelSpawner = FindObjectOfType<BagelSpawner>();
         }
 
         void Update()
@@ -35,6 +37,12 @@ namespace Assets.Scripts
                     _questManager.Complete(questHolder.QuestName, PlayerStats);
                     Destroy(questHolder);
                 }
+            }
+            else if (collision.gameObject.CompareTag("Bagel"))
+            {
+                PlayerStats.Eat(Bagel.Value);
+                Destroy(collision.gameObject);
+                _bagelSpawner.CreateBagel();
             }
         }
     }
