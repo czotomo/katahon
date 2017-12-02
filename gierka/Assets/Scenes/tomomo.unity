@@ -264,6 +264,11 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 503074303}
+    - target: {fileID: 114906800083157202, guid: 4396d6335a1957f4eba604c0e2c22868,
+        type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4396d6335a1957f4eba604c0e2c22868, type: 2}
   m_IsPrefabParent: 0
@@ -1584,7 +1589,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1791138763996054, guid: 59f50906777722a49829ef66a972ea34, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 59f50906777722a49829ef66a972ea34, type: 2}
