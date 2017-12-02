@@ -474,6 +474,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224769159191984890}
+  - component: {fileID: 114516662918579954}
   m_Layer: 5
   m_Name: StateSliders
   m_TagString: Untagged
@@ -826,6 +827,24 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114516662918579954
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1685006079053960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7074977c4947b804989f794fde3efe67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player:
+    PlJoy: 20
+    PlHunger: 20
+    PlTired: 20
+    PlKnow: 20
+    PlLuck: 20
+  stats: 0
 --- !u!114 &114520748771178490
 MonoBehaviour:
   m_ObjectHideFlags: 1
