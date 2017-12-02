@@ -17,5 +17,12 @@ namespace Assets.Scripts
             return PlayerStats.GetSpeed();
         }
 
+        void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.CompareTag("Building"))
+            {
+                Debug.Log("Jebło to jebło, po chuj drążyć temat.");
+            }
+        }
     }
 }
