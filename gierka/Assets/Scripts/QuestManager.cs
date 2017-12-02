@@ -1,16 +1,19 @@
 ﻿using System.Collections.Generic;
+using System.Security.Policy;
 using Assets.Scripts.Quests;
 using UnityEngine;
 
 namespace Assets.Scripts
 {
-    public class QuestManager : MonoBehaviour {
-
+    public class QuestManager : MonoBehaviour
+    {
         private List<Quest> activeQuests = new List<Quest>();
+
+        public QuestFactory questFactory;
 
         void Start()
         {
-            activeQuests.Add(new ReachDestinationQuest { Name = "Yes" });
+            activeQuests.Add(questFactory.GenerateRandomReachDestinationQuest());
         }
 
         public void Add(Quest quest)
