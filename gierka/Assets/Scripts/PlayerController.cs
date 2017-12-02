@@ -34,6 +34,7 @@ namespace Assets.Scripts
                 if (questHolder != null)
                 {
                     _questManager.Complete(questHolder.QuestName, PlayerStats);
+                    Destroy(questHolder);
                 }
             }
         }
