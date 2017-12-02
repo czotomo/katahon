@@ -31,7 +31,7 @@ namespace Assets.Scripts.Quests
         {
             string[] prefixes =  { "Ruszaj do", "Biegnij do", "Pędź do" };
             string[] eventTypes = { "kolosa", "wykład", "ćwiczenia", "laborki" };
-            string[] subjects = { "WDI", "ASD", "" };
+            string[] subjects = { "WDI", "ASD", "Analizy" };
 
             string randomPrefix = prefixes[_random.Next(prefixes.Length)];
             string randomEventType = eventTypes[_random.Next(eventTypes.Length)];
