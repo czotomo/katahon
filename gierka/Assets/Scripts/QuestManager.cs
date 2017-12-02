@@ -80,6 +80,8 @@ namespace Assets.Scripts
             {
                 builder.Append(quest.Name);
                 builder.Append(Environment.NewLine);
+                builder.Append("-------------------");
+                builder.Append(Environment.NewLine);
             }
             return builder.ToString().Trim();
         }
