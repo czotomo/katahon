@@ -32,7 +32,8 @@ namespace Assets.Scripts
                 var questHolder = collision.gameObject.GetComponent<QuestHolder>();
                 if (questHolder != null)
                 {
-                    _questManager.Complete(questHolder.QuestName);
+                    _questManager.Complete(questHolder.QuestName, PlayerStats);
+                    Destroy(questHolder);
                 }
             }
         }

@@ -4,6 +4,6 @@ namespace Assets.Scripts.Quests
 {
     public class QuestHolder : MonoBehaviour
     {
-        public string QuestName;
+        public string QuestName { get; set; }
     }
 }

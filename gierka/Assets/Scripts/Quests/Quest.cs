@@ -4,11 +4,11 @@
     {
         public string Name { get; set; }
 
-        public void Complete()
+        public void Complete(PlayerStats stats)
         {
-            OnQuestCompleted();
+            OnQuestCompleted(stats);
         }
 
-        public abstract void OnQuestCompleted(); //todo should pass player reference here
+        public abstract void OnQuestCompleted(PlayerStats stats); //todo should pass player reference here
     }
 }
