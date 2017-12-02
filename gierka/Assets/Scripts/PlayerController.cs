@@ -4,8 +4,7 @@ namespace Assets.Scripts
 {
     public class PlayerController : MonoBehaviour
     {
-
-        private float _speed = 10.0f;
+        public PlayerStats PlayerStats;
 
         void Update()
         {
@@ -15,7 +14,7 @@ namespace Assets.Scripts
 
         public float GetSpeed()
         {
-            return _speed;
+            return PlayerStats.GetSpeed();
         }
 
     }
