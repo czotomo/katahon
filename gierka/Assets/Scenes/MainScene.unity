@@ -112,6 +112,53 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &1128900961
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4197274245296536, guid: e31def8cb5e7d37478e021016f3e7792, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.157
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197274245296536, guid: e31def8cb5e7d37478e021016f3e7792, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.384
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197274245296536, guid: e31def8cb5e7d37478e021016f3e7792, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.034421757
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197274245296536, guid: e31def8cb5e7d37478e021016f3e7792, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197274245296536, guid: e31def8cb5e7d37478e021016f3e7792, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197274245296536, guid: e31def8cb5e7d37478e021016f3e7792, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197274245296536, guid: e31def8cb5e7d37478e021016f3e7792, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4197274245296536, guid: e31def8cb5e7d37478e021016f3e7792, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114820707188761430, guid: e31def8cb5e7d37478e021016f3e7792,
+        type: 2}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 2012140460}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e31def8cb5e7d37478e021016f3e7792, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1716272625
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,3 +274,9 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 59f50906777722a49829ef66a972ea34, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &2012140460 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114749799159566462, guid: 59f50906777722a49829ef66a972ea34,
+    type: 2}
+  m_PrefabInternal: {fileID: 2012140459}
+  m_Script: {fileID: 11500000, guid: 736a19e61e5db8d42adf10e0dd67ec06, type: 3}
