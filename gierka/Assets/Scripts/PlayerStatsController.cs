@@ -8,10 +8,12 @@ namespace Assets.Scripts
 {
     public class PlayerStatsController : MonoBehaviour
     {
-        public PlayerStats player;
+        private Slider[] sliders;
+        public PlayerController player;
 
         void Start()
         {
+            sliders = GetComponentsInChildren<Slider>();
             UpdateSliders();
         }
 
@@ -22,22 +24,20 @@ namespace Assets.Scripts
 
         private void UpdateSliders()
         {
-            Slider[] sliders = GetComponentsInChildren<Slider>();
-
             foreach(var slider in sliders)
             {
                 switch(slider.name) {
                     case "RestSlider":
-                        slider.value = 20 - player.PlTired;
+                        slider.value = 20 - player.PlayerStats.PlTired;
                         break;
                     case "JoySlider":
-                        slider.value = player.PlJoy;
+                        slider.value = player.PlayerStats.PlJoy;
                         break;
                     case "HungerSlider":
-                        slider.value = player.PlHunger;
+                        slider.value = player.PlayerStats.PlHunger;
                         break;
                     case "KnowledgeSlider":
-                        slider.value = player.PlKnow;
+                        slider.value = player.PlayerStats.PlKnow;
                         break;
                     default:
                         throw new Exception("woah");
