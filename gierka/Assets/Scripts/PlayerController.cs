@@ -1,10 +1,18 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.Quests;
+using UnityEngine;
 
 namespace Assets.Scripts
 {
     public class PlayerController : MonoBehaviour
     {
         public PlayerStats PlayerStats;
+
+        private QuestManager _questManager;
+
+        void Start()
+        {
+            _questManager = FindObjectOfType<QuestManager>();
+        }
 
         void Update()
         {
@@ -22,6 +30,11 @@ namespace Assets.Scripts
             if (collision.gameObject.CompareTag("Building"))
             {
                 Debug.Log("Jebło to jebło, po chuj drążyć temat.");
+                var questHolder = collision.gameObject.GetComponent<QuestHolder>();
+                if (questHolder != null)
+                {
+                    _questManager.Complete(questHolder.QuestName);
+                }
             }
         }
     }

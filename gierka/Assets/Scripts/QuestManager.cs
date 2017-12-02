@@ -10,7 +10,7 @@ namespace Assets.Scripts
 
         void Start()
         {
-
+            activeQuests.Add(new ReachDestinationQuest { Name = "Yes" });
         }
 
         public void Add(Quest quest)
