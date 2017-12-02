@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStats : MonoBehaviour
+[System.Serializable]
+public class PlayerStats
 {
    [Range(0, 20)] public float PlJoy = 20;
    [Range(0, 20)] public float PlHunger = 20;
